@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Users, BookOpen, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroCarousel from "@/components/HeroCarousel";
+import AnnouncementsBar from "@/components/AnnouncementsBar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -38,6 +39,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <AnnouncementsBar />
       <HeroCarousel />
 
       {/* Features Section */}

@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +20,25 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Courses", path: "/courses" },
+    {
+      name: "Academics",
+      path: "/courses",
+      subItems: [
+        { name: "Courses", path: "/courses" },
+        { name: "Faculty", path: "/academics/faculty" },
+        { name: "Infrastructure", path: "/academics/infrastructure" },
+        { name: "Research", path: "/academics/research" },
+      ],
+    },
+    {
+      name: "Student Life",
+      path: "/student-life/clubs",
+      subItems: [
+        { name: "Clubs & Activities", path: "/student-life/clubs" },
+        { name: "Sports & Fitness", path: "/student-life/sports" },
+        { name: "Events", path: "/student-life/events" },
+      ],
+    },
     { name: "Admissions", path: "/admissions" },
     { name: "Contact", path: "/contact" },
   ];
@@ -33,16 +59,46 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <Link key={link.path} to={link.path}>
-                <Button
-                  variant={isActive(link.path) ? "default" : "ghost"}
-                  className="transition-smooth"
-                >
-                  {link.name}
-                </Button>
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.subItems ? (
+                <div key={link.name} className="relative group">
+                  <Button
+                    variant={link.subItems.some(sub => isActive(sub.path)) ? "default" : "ghost"}
+                    className="transition-smooth"
+                    asChild
+                  >
+                    <div className="flex items-center cursor-pointer">
+                      {link.name}
+                      <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
+                    </div>
+                  </Button>
+                  <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="bg-background border border-border rounded-lg shadow-elegant min-w-[200px] overflow-hidden">
+                      {link.subItems.map((subItem) => (
+                        <Link key={subItem.path} to={subItem.path}>
+                          <div
+                            className={`px-4 py-3 hover:bg-muted transition-smooth ${
+                              isActive(subItem.path) ? "bg-primary/10 text-primary" : "text-foreground"
+                            }`}
+                          >
+                            {subItem.name}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link key={link.path} to={link.path}>
+                  <Button
+                    variant={isActive(link.path) ? "default" : "ghost"}
+                    className="transition-smooth"
+                  >
+                    {link.name}
+                  </Button>
+                </Link>
+              )
+            )}
             <Button variant="secondary" className="ml-4">
               Apply Now
             </Button>
@@ -68,16 +124,34 @@ const Navbar = () => {
               className="md:hidden overflow-hidden"
             >
               <div className="py-4 space-y-2">
-                {navLinks.map((link) => (
-                  <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)}>
-                    <Button
-                      variant={isActive(link.path) ? "default" : "ghost"}
-                      className="w-full justify-start"
-                    >
-                      {link.name}
-                    </Button>
-                  </Link>
-                ))}
+                {navLinks.map((link) =>
+                  link.subItems ? (
+                    <div key={link.name} className="space-y-1">
+                      <div className="px-2 py-1 text-sm font-semibold text-muted-foreground">
+                        {link.name}
+                      </div>
+                      {link.subItems.map((subItem) => (
+                        <Link key={subItem.path} to={subItem.path} onClick={() => setIsOpen(false)}>
+                          <Button
+                            variant={isActive(subItem.path) ? "default" : "ghost"}
+                            className="w-full justify-start pl-6"
+                          >
+                            {subItem.name}
+                          </Button>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)}>
+                      <Button
+                        variant={isActive(link.path) ? "default" : "ghost"}
+                        className="w-full justify-start"
+                      >
+                        {link.name}
+                      </Button>
+                    </Link>
+                  )
+                )}
                 <Button variant="secondary" className="w-full">
                   Apply Now
                 </Button>
