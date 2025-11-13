@@ -1,31 +1,42 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import hero1 from "@/assets/hero1.jpg";
-import hero2 from "@/assets/hero2.jpg";
-import hero3 from "@/assets/hero3.jpg";
+import { ChevronLeft, ChevronRight, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const slides = [
   {
-    image: hero1,
+    image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG09059_s41ys3.jpg",
     title: "Welcome to Aadhya",
     subtitle: "Empowering Women Through Education",
     description: "Join us in shaping the future of women's higher education",
   },
   {
-    image: hero2,
+    image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG08907_xmqvup.jpg",
     title: "Excellence in Learning",
     subtitle: "State-of-the-Art Facilities",
     description: "Modern infrastructure designed for comprehensive learning",
   },
   {
-    image: hero3,
+    image: "https://res.cloudinary.com/dsygwvdij/image/upload/DSC06966_uxh9fz.jpg",
+    title: "Excellence in Learning",
+    subtitle: "State-of-the-Art Facilities",
+    description: "Modern infrastructure designed for comprehensive learning",
+  },
+  {
+    image: "https://res.cloudinary.com/dsygwvdij/image/upload/DSC06794_n4kzbn.jpg",
+    title: "Bright Futures",
+    subtitle: "Celebrating Success",
+    description: "Creating leaders and changemakers of tomorrow",
+  },
+  {
+    image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG09086_gqo7fe.jpg",
     title: "Bright Futures",
     subtitle: "Celebrating Success",
     description: "Creating leaders and changemakers of tomorrow",
   },
 ];
+
+
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -55,7 +66,8 @@ const HeroCarousel = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           >
-            <div className="absolute inset-0 gradient-hero" />
+            {/* <div className="absolute inset-0" /> */}
+            <div className="absolute inset-0 bg-slate-900/50" />
           </div>
 
           <div className="relative h-full container mx-auto px-4 flex items-center">
@@ -69,7 +81,7 @@ const HeroCarousel = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.7 }}
-                className="text-accent text-lg md:text-xl font-semibold mb-2"
+                className="text-accent text-lg md:text-xl font-semibold  mb-2"
               >
                 {slides[currentSlide].subtitle}
               </motion.p>

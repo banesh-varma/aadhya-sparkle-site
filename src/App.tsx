@@ -18,6 +18,8 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Faculty = lazy(() => import("./pages/academics/Faculty"));
 const Infrastructure = lazy(() => import("./pages/academics/Infrastructure"));
 const Research = lazy(() => import("./pages/academics/Research"));
+const AboutUs = lazy(() => import("./pages/aboutus/AboutUs"))
+// const AboutUs = lazy(() => import ("./pages/aboutus/AboutUs"))
 const Clubs = lazy(() => import("./pages/student-life/Clubs"));
 const Sports = lazy(() => import("./pages/student-life/Sports"));
 const Events = lazy(() => import("./pages/student-life/Events"));
@@ -48,6 +50,7 @@ const AppRoutes = () => {
           <Route path="/academics/faculty" element={<Faculty />} />
           <Route path="/academics/infrastructure" element={<Infrastructure />} />
           <Route path="/academics/research" element={<Research />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/student-life/clubs" element={<Clubs />} />
           <Route path="/student-life/sports" element={<Sports />} />
           <Route path="/student-life/events" element={<Events />} />

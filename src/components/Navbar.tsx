@@ -31,6 +31,18 @@ const Navbar = () => {
       ],
     },
     {
+      name: "About Us",
+      path: "/about-us",
+      subItems: [
+        { name: "About Us", path: "/about-us" },
+        { name: "Vision", path: "/aboutus-us/vision" },
+        { name: "Governing", path: "/aboutus-us/governing" },
+        { name: "Facilities", path: "/aboutus-us/facilities" },
+        { name: "ConductOfStudents", path: "/aboutus-us/conductofstudents" },
+        { name: "Organogram", path: "/aboutus-us/organogram" },
+      ],
+    },
+    {
       name: "Student Life",
       path: "/student-life/clubs",
       subItems: [
@@ -46,7 +58,7 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-card">
+    <nav className="top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-card">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3 transition-smooth hover:opacity-80">

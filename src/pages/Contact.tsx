@@ -142,25 +142,35 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Find Us Here</h2>
+            {/* <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Find Us Here</h2> */}
             <Card className="shadow-card overflow-hidden">
-              <CardContent className="p-0">
-                <div className="bg-muted h-[400px] flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-                    <p className="text-lg text-muted-foreground">
-                      Interactive map would be embedded here
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-2">
-                      Hyderabad, Telangana, India
-                    </p>
-                  </div>
+              <CardContent className="pb-10">
+                <div className="max-w-5xl mx-auto text-center">
+                  <h2 className="text-3xl font-bold text-primary mb-8">Contact Us</h2>
+                  <p className="text-gray-700 mb-4">Hyderabad Degree College, Dilsukhnagar, Hyderabad</p>
+                  <p className="text-gray-600 mb-6">📞 +91 98765 43210 | ✉️ info@hyderabadcollege.edu.in</p>
+                  <iframe
+                      title="map"
+                      src="https://www.google.com/maps?q=dilsukhnagar%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      className="w-full h-64 rounded-xl border-0"
+                  ></iframe>
                 </div>
               </CardContent>
             </Card>
           </motion.div>
         </div>
       </section>
+
+        {/* <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-primary mb-8">Contact Us</h2>
+          <p className="text-gray-700 mb-4">Hyderabad Degree College, Dilsukhnagar, Hyderabad</p>
+          <p className="text-gray-600 mb-6">📞 +91 98765 43210 | ✉️ info@hyderabadcollege.edu.in</p>
+          <iframe
+              title="map"
+              src="https://www.google.com/maps?q=dilsukhnagar%20Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-64 rounded-xl border-0"
+          ></iframe>
+        </div>     */}
     </div>
   );
 };
