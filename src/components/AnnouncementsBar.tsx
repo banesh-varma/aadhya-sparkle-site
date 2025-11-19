@@ -5,7 +5,7 @@ import { X, Megaphone } from "lucide-react";
 const announcements = [
   {
     id: 1,
-    text: "🎓 Admissions Open for 2024-25 Academic Year! Apply Now",
+    text: "🎓 Admissions Open for 2025-26 Academic Year! Apply Now",
     link: "/admissions",
   },
   {

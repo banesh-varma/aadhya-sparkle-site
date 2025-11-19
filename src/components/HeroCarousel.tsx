@@ -4,12 +4,12 @@ import { ChevronLeft, ChevronRight, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const slides = [
-  {
-    image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG09059_s41ys3.jpg",
-    title: "Welcome to Aadhya",
-    subtitle: "Empowering Women Through Education",
-    description: "Join us in shaping the future of women's higher education",
-  },
+  // {
+  //   image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG09059_s41ys3.jpg",
+  //   title: "Welcome to Aadhya",
+  //   subtitle: "Empowering Women Through Education",
+  //   description: "Join us in shaping the future of women's higher education",
+  // },
   {
     image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG08907_xmqvup.jpg",
     title: "Excellence in Learning",
@@ -28,12 +28,12 @@ const slides = [
     subtitle: "Celebrating Success",
     description: "Creating leaders and changemakers of tomorrow",
   },
-  {
-    image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG09086_gqo7fe.jpg",
-    title: "Bright Futures",
-    subtitle: "Celebrating Success",
-    description: "Creating leaders and changemakers of tomorrow",
-  },
+  // {
+  //   image: "https://res.cloudinary.com/dsygwvdij/image/upload/NAG09086_gqo7fe.jpg",
+  //   title: "Bright Futures",
+  //   subtitle: "Celebrating Success",
+  //   description: "Creating leaders and changemakers of tomorrow",
+  // },
 ];
 
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Users, BookOpen, Award, ArrowRight, Megaphone } from "lucide-react";
+import { GraduationCap, Users, BookOpen, Award, ArrowRight, Megaphone, Activity, Globe2, Briefcase, HeartHandshake, Laptop, Building2, Microscope, Library } from "lucide-react";
 import { Link } from "react-router-dom";
 import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
@@ -9,28 +9,106 @@ import book from "../assets/book.png"
 import degree from "../assets/degree.png"
 
 const Home = () => {
+  // const features = [
+  //   {
+  //     icon: <GraduationCap className="w-12 h-12 text-primary" />,
+  //     title: "Quality Education",
+  //     description: "Comprehensive academic programs designed for women's empowerment",
+  //   },
+  //   {
+  //     icon: <Users className="w-12 h-12 text-secondary" />,
+  //     title: "Expert Faculty",
+  //     description: "Learn from experienced educators dedicated to your success",
+  //   },
+  //   {
+  //     icon: <BookOpen className="w-12 h-12 text-accent" />,
+  //     title: "Modern Curriculum",
+  //     description: "Updated courses aligned with industry standards and requirements",
+  //   },
+  //   {
+  //     icon: <Award className="w-12 h-12 text-primary" />,
+  //     title: "100% Placement",
+  //     description: "Strong placement record with top companies and organizations",
+  //   },
+  // ];
+
   const features = [
-    {
-      icon: <GraduationCap className="w-12 h-12 text-primary" />,
-      title: "Quality Education",
-      description: "Comprehensive academic programs designed for women's empowerment",
-    },
-    {
-      icon: <Users className="w-12 h-12 text-secondary" />,
-      title: "Expert Faculty",
-      description: "Learn from experienced educators dedicated to your success",
-    },
-    {
-      icon: <BookOpen className="w-12 h-12 text-accent" />,
-      title: "Modern Curriculum",
-      description: "Updated courses aligned with industry standards and requirements",
-    },
-    {
-      icon: <Award className="w-12 h-12 text-primary" />,
-      title: "100% Placement",
-      description: "Strong placement record with top companies and organizations",
-    },
-  ];
+  {
+    icon: <GraduationCap className="w-12 h-12 text-primary" />,
+    title: "Quality Education",
+    description:
+      "Our degree programs are designed with a strong academic foundation, blending theoretical knowledge with practical learning. We focus on empowering students through personalized teaching methods and a curriculum that nurtures confidence, critical thinking, and leadership qualities.",
+  },
+  {
+    icon: <Users className="w-12 h-12 text-secondary" />,
+    title: "Expert Faculty",
+    description:
+      "Our experienced and highly qualified faculty members bring years of academic and industry expertise. They provide mentorship, personalized guidance, and engaging teaching methods to ensure every student gains deep understanding and real-world skills.",
+  },
+  {
+    icon: <BookOpen className="w-12 h-12 text-accent" />,
+    title: "Modern Curriculum",
+    description:
+      "Our courses are regularly updated to match current industry demands and academic standards. Students learn through innovative teaching methods, updated study materials, and practical assignments that prepare them for future careers and higher studies.",
+  },
+  // {
+  //   icon: <Award className="w-12 h-12 text-primary" />,
+  //   title: "100% Placement",
+  //   description:
+  //     "We maintain strong relationships with leading companies and organizations. Our placement cell offers continuous training, interview preparation, and career support to help students secure jobs in reputed industries with excellent growth opportunities.",
+  // },
+
+  // Extra Features with Longer Descriptions
+  {
+    icon: <Library className="w-12 h-12 text-green-600" />,
+    title: "Advanced Library",
+    description:
+      "Our digital and physical library provides access to thousands of books, research journals, e-learning materials, and online databases. The environment encourages self-study and research, supporting students in academic excellence and competitive exam preparation.",
+  },
+  // {
+  //   icon: <Microscope className="w-12 h-12 text-purple-600" />,
+  //   title: "Well-Equipped Labs",
+  //   description:
+  //     "Students gain hands-on experience through fully equipped laboratories with modern instruments and technology. Practical sessions are designed to strengthen conceptual understanding and develop problem-solving and analytical skills.",
+  // },
+  // {
+  //   icon: <Building2 className="w-12 h-12 text-blue-500" />,
+  //   title: "Modern Infrastructure",
+  //   description:
+  //     "Our campus offers well-designed classrooms, spacious seminar halls, dedicated study areas, and student-friendly facilities. A clean, well-maintained, and safe environment ensures a comfortable and productive academic experience.",
+  // },
+  // {
+  //   icon: <Laptop className="w-12 h-12 text-orange-500" />,
+  //   title: "E-Learning Support",
+  //   description:
+  //     "We integrate technology in education through digital classrooms, e-learning platforms, and LMS support. Students can access recorded lectures, study materials, and online assessments anytime, enhancing flexible and effective learning.",
+  // },
+  {
+    icon: <HeartHandshake className="w-12 h-12 text-pink-600" />,
+    title: "Student Support",
+    description:
+      "We offer continuous support through academic counseling, personal mentoring, and mental wellness assistance. Our approach ensures that students feel valued, confident, and motivated throughout their academic journey.",
+  },
+  {
+    icon: <Briefcase className="w-12 h-12 text-teal-600" />,
+    title: "Career Guidance",
+    description:
+      "Our dedicated career guidance cell helps students discover their strengths, choose the right path, and prepare for future opportunities. Resume building, interview skills, competitive exam coaching, and career counseling are provided regularly.",
+  },
+  {
+    icon: <Globe2 className="w-12 h-12 text-indigo-500" />,
+    title: "Industry Connect",
+    description:
+      "We organize seminars, guest lectures, industrial visits, and internships to give students exposure to real-world work environments. These interactions help students understand industry expectations and enhance their career readiness.",
+  },
+  {
+    icon: <Activity className="w-12 h-12 text-red-500" />,
+    title: "Clubs & Activities",
+    description:
+      "Our college encourages holistic development through cultural events, sports competitions, NSS activities, and various student-led clubs. These platforms help students build confidence, creativity, teamwork, and leadership skills.",
+  },
+];
+
 
   const Announcements = [
     {
@@ -266,11 +344,12 @@ const Home = () => {
               </motion.div>
             ))}
           </div>
+          
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 gradient-primary">
+      {/* <section className="py-20 gradient-primary">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -288,8 +367,234 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section> */}
+
+      <section
+        className="py-20 relative bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage: "url('https://res.cloudinary.com/dsygwvdij/image/upload/DSC06794_n4kzbn.jpg')",
+        }}
+        >
+        {/* Overlay to improve text readability */}
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center text-white"
+              >
+                <h3 className="text-4xl md:text-5xl font-bold mb-2">
+                  {stat.number}
+                </h3>
+                <p className="text-lg text-white/90">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>  
       </section>
 
+        {/* Student Testimonials Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              What Our Students Say
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Real experiences from students who grew, succeeded, and transformed at Aadhya
+            </p>
+          </motion.div>
+
+          {/* Testimonials Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                name: "Sravani – B.Com (CA)",
+                text: "Aadhya College helped me discover my strengths. The teachers supported me at every step and boosted my confidence.",
+                image: "https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_02_2025_-_9_51PM_pbofj9.png",
+              },
+              {
+                name: "Meghana – B.Sc (CS)",
+                text: "The campus environment is safe and encouraging. I improved my communication, technical skills, and overall personality.",
+                image: "https://res.cloudinary.com/dsygwvdij/image/upload/ChatGPT_Image_Jul_15_2025_11_34_29_AM_qomukj.png",
+              },
+              {
+                name: "Haritha – B.A English",
+                text: "From cultural activities to seminars, every experience helped me grow. The college truly shapes confident young women.",
+                image: "https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_02_2025_-_9_51PM_pbofj9.png",
+              },
+              {
+                name: "Anusha – BBA",
+                text: "The practical teaching, presentations, and training sessions improved my leadership and management skills.",
+                image: "https://res.cloudinary.com/dsygwvdij/image/upload/ChatGPT_Image_Jul_15_2025_11_34_29_AM_qomukj.png",
+              },
+              {
+                name: "Keerthi – BCA",
+                text: "The computer labs, workshops, and projects helped me build real IT knowledge. Today, I feel industry-ready.",
+                image: "https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_02_2025_-_9_51PM_pbofj9.png",
+              },
+              {
+                name: "Navya – B.Sc (DS)",
+                text: "Aadhya offers the best mix of academics and personality development. I gained confidence, discipline, and career direction.",
+                image: "https://res.cloudinary.com/dsygwvdij/image/upload/ChatGPT_Image_Jul_15_2025_11_34_29_AM_qomukj.png",
+              },
+            ].map((review, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="shadow-card hover:shadow-elegant transition-smooth h-full">
+                  
+                  {/* Student Image */}
+                  <div className="flex justify-center pt-6">
+                    <img
+                      src={review.image}
+                      className="w-20 h-20 rounded-full object-cover border-4 border-orange-400 shadow-lg"
+                      alt={review.name}
+                    />
+                  </div>
+
+                  <CardContent className="p-6 text-center">
+                    <p className="text-muted-foreground mb-4 text-lg leading-relaxed">
+                      “{review.text}”
+                    </p>
+                    <p className="font-semibold text-foreground">{review.name}</p>
+                  </CardContent>
+
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
+      {/* Recruiters / Hiring Partners */}
+      <section className="py-24 bg-gradient-to-br from-orange-50 via-white to-orange-100 relative overflow-hidden">
+
+        {/* Stunning Background Effects */}
+        <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-orange-400/20 blur-3xl rounded-full"></div>
+        <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-primary/20 blur-[120px] rounded-full"></div>
+
+        {/* ANIMATION CSS */}
+        <style>
+          {`
+            @keyframes slideLeft {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-100%); }
+            }
+
+            @keyframes slideRight {
+              0% { transform: translateX(-100%); }
+              100% { transform: translateX(0); }
+            }
+
+            .slider {
+              display: flex;
+              white-space: nowrap;
+              width: max-content;
+            }
+
+            .slide-left {
+              animation: slideLeft 25s linear infinite;
+            }
+
+            .slide-right {
+              animation: slideRight 25s linear infinite;
+            }
+
+            .slide-left:hover,
+            .slide-right:hover {
+              animation-play-state: paused;
+            }
+
+            /* Logo Card Hover Effects */
+            .recruiter-card {
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+              backdrop-filter: blur(10px);
+            }
+
+            .recruiter-card:hover {
+              transform: translateY(-6px) scale(1.05);
+              box-shadow: 0 8px 40px rgba(255, 123, 0, 0.3);
+            }
+          `}
+        </style>
+
+        {/* Heading */}
+        <div className="container mx-auto px-4 text-center mb-16 relative z-10">
+          <h2 className="text-5xl font-extrabold text-foreground drop-shadow-sm">
+            Our Recruiters
+          </h2>
+          <p className="text-lg text-muted-foreground mt-3 max-w-2xl mx-auto">
+            Top companies that visited our campus for placements, internships, and interviews.
+          </p>
+        </div>
+
+        {/* FIRST ROW (LEFT → RIGHT) */}
+        <div className="overflow-hidden mb-10 relative z-10 p-5">
+          <div className="slider slide-left gap-10">
+            {[
+              "Infosys", "TCS", "Wipro", "Amazon", "HCL",
+              "Tech Mahindra", "Accenture", "Genpact", "Dell", "Cognizant"
+            ].map((company, index) => (
+              <div
+                key={index}
+                className="
+                  recruiter-card mx-4 px-6 py-4 
+                  bg-white/30 border border-white/40 
+                  shadow-lg rounded-xl backdrop-blur-xl 
+                  flex items-center gap-3
+                "
+              >
+                <span className="h-2 w-2 bg-primary rounded-full"></span>
+                <p className="font-semibold text-foreground">{company}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* SECOND ROW (RIGHT → LEFT) */}
+        <div className="overflow-hidden relative z-10 p-5">
+          <div className="slider slide-right gap-10">
+            {[
+              "Capgemini", "IBM", "Mindtree", "Oracle", "Google",
+              "SAP", "Byju's", "Flipkart", "Deloitte", "Zoho"
+            ].map((company, index) => (
+              <div
+                key={index}
+                className="
+                  recruiter-card mx-4 px-6 py-4 
+                  bg-white/30 border border-white/40 
+                  shadow-lg rounded-xl backdrop-blur-xl 
+                  flex items-center gap-3
+                "
+              >
+                <span className="h-2 w-2 bg-primary rounded-full"></span>
+                <p className="font-semibold text-foreground">{company}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      
       {/* Call to Action */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
