@@ -348,27 +348,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      {/* <section className="py-20 gradient-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center text-white"
-              >
-                <h3 className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</h3>
-                <p className="text-lg text-white/90">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       <section
         className="py-20 relative bg-fixed bg-cover bg-center"
         style={{

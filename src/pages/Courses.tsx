@@ -3,6 +3,13 @@ import { BookOpen, Clock, IndianRupee, CheckCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import aadhya_ba from "../assets/courses/aadhya_ba.png";
+import aadhya_bcom from "../assets/courses/aadhya_bcom.jpg";
+import aadhya_bsc from "../assets/courses/aadhya_bsc.jpg";
+import aadhya_bba from "../assets/courses/aadhya_bba.png";
+import aadhya_bca from "../assets/courses/aadhya_bca.png";
+
+
 const Courses = () => {
   const courses = [
     {
@@ -11,6 +18,7 @@ const Courses = () => {
       fee: "₹30,000/year",
       specializations: ["English", "History", "Political Science", "Economics", "Psychology"],
       description: "Comprehensive liberal arts education with diverse specialization options",
+      image: aadhya_ba
     },
     {
       name: "Bachelor of Commerce (B.Com)",
@@ -18,6 +26,7 @@ const Courses = () => {
       fee: "₹35,000/year",
       specializations: ["General", "Computer Applications", "Accounting & Finance"],
       description: "Develop business acumen and accounting expertise for corporate careers",
+      image: aadhya_bcom
     },
     {
       name: "Bachelor of Science (B.Sc.)",
@@ -25,6 +34,7 @@ const Courses = () => {
       fee: "₹40,000/year",
       specializations: ["Mathematics", "Physics", "Chemistry", "Computer Science", "Biotechnology"],
       description: "Strong foundation in sciences with laboratory and research facilities",
+      image: aadhya_bsc
     },
     {
       name: "Bachelor of Business Administration (BBA)",
@@ -32,6 +42,7 @@ const Courses = () => {
       fee: "₹45,000/year",
       specializations: ["General Management", "Marketing", "Human Resources", "Finance"],
       description: "Industry-oriented program preparing students for management roles",
+      image: aadhya_bba
     },
     {
       name: "Bachelor of Computer Applications (BCA)",
@@ -39,6 +50,7 @@ const Courses = () => {
       fee: "₹50,000/year",
       specializations: ["Software Development", "Data Science", "Web Technologies"],
       description: "Comprehensive IT education with focus on programming and applications",
+      image: aadhya_bca
     },
   ];
 
@@ -89,47 +101,45 @@ const Courses = () => {
                         <CardTitle className="text-2xl md:text-3xl mb-2">{course.name}</CardTitle>
                         <CardDescription className="text-base">{course.description}</CardDescription>
                       </div>
-                      <Button variant="secondary">Apply Now</Button>
+                      {/* <Button variant="secondary">Apply Now</Button> */}
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-3 gap-6 mb-6">
-                      <div className="flex items-center space-x-3">
-                        <Clock className="w-5 h-5 text-primary flex-shrink-0" />
-                        <div>
-                          <p className="text-sm text-muted-foreground">Duration</p>
-                          <p className="font-semibold">{course.duration}</p>
+                  <div className="grid md:grid-cols-2">
+                    <CardContent>
+                      <div className="grid md:grid-cols-3 gap-6 mb-6">
+                        <div className="flex items-center space-x-3">
+                          <Clock className="w-5 h-5 text-primary flex-shrink-0" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Duration</p>
+                            <p className="font-semibold">{course.duration}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <BookOpen className="w-5 h-5 text-accent flex-shrink-0" />
+                          <div>
+                            <p className="text-sm text-muted-foreground">Specializations</p>
+                            <p className="font-semibold">{course.specializations.length}</p>
+                          </div>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <IndianRupee className="w-5 h-5 text-secondary flex-shrink-0" />
-                        <div>
-                          <p className="text-sm text-muted-foreground">Annual Fee</p>
-                          <p className="font-semibold">{course.fee}</p>
+                      <div>
+                        <p className="font-semibold mb-3">Specialization Options:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {course.specializations.map((spec, i) => (
+                            <span
+                              key={i}
+                              className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                            >
+                              {spec}
+                            </span>
+                          ))}
                         </div>
                       </div>
-                      <div className="flex items-center space-x-3">
-                        <BookOpen className="w-5 h-5 text-accent flex-shrink-0" />
-                        <div>
-                          <p className="text-sm text-muted-foreground">Specializations</p>
-                          <p className="font-semibold">{course.specializations.length}</p>
-                        </div>
-                      </div>
+                    </CardContent>
+                    <div className="md:flex justify-center mb-6 hidden lg:visible ">
+                      <img className="w-80 shadow-lg hover:scale-105 transition-all duration-500" src={course.image} alt="" />
                     </div>
-                    <div>
-                      <p className="font-semibold mb-3">Specialization Options:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {course.specializations.map((spec, i) => (
-                          <span
-                            key={i}
-                            className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
-                          >
-                            {spec}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
+                  </div>
                 </Card>
               </motion.div>
             ))}
