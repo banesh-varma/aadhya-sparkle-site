@@ -41,14 +41,14 @@ const Admissions = () => {
     "Recent passport-size photographs",
   ];
 
-  // const importantDates = [
-  //   { event: "Application Opens", date: "March 1, 2024" },
-  //   { event: "Application Deadline", date: "May 31, 2024" },
-  //   { event: "Entrance Test", date: "June 15, 2024" },
-  //   { event: "Merit List Announcement", date: "June 30, 2024" },
-  //   { event: "Admission Process Begins", date: "July 1, 2024" },
-  //   { event: "Classes Commence", date: "July 15, 2024" },
-  // ];
+  const importantDates = [
+    { event: "Application Opens", date: "March 1, 2024" },
+    { event: "Application Deadline", date: "May 31, 2024" },
+    { event: "Entrance Test", date: "June 15, 2024" },
+    { event: "Merit List Announcement", date: "June 30, 2024" },
+    { event: "Admission Process Begins", date: "July 1, 2024" },
+    { event: "Classes Commence", date: "July 15, 2024" },
+  ];
 
   const images = [
     { id: 1, src: admission, title: "Admission" },
