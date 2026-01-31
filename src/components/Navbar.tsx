@@ -65,7 +65,7 @@ const Navbar = () => {
             <img src={logo} alt="Aadhya College Logo" className="h-14 w-auto" />
             <div className="hidden lg:block">
               <h1 className="text-xl font-bold text-primary">Aadhya</h1>
-              <p className="text-xs text-muted-foreground">Women's Degree College</p>
+              <p className="text-xs text-muted-foreground">Women's Degree College <br /> DostCode - 11115</p>
             </div>
           </Link>
 

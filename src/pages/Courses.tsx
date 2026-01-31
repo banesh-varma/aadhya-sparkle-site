@@ -8,36 +8,35 @@ const Courses = () => {
     {
       name: "Bachelor of Arts (B.A.)",
       duration: "3 Years",
-      fee: "₹30,000/year",
-      specializations: ["English", "History", "Political Science", "Economics", "Psychology"],
+      specializations: ["Public Administration",  "Political Science", "Economics", ],
       description: "Comprehensive liberal arts education with diverse specialization options",
     },
     {
       name: "Bachelor of Commerce (B.Com)",
       duration: "3 Years",
       fee: "₹35,000/year",
-      specializations: ["General", "Computer Applications", "Accounting & Finance"],
+      specializations: ["General", "Computer Applications", "Business Analytics",],
       description: "Develop business acumen and accounting expertise for corporate careers",
     },
     {
       name: "Bachelor of Science (B.Sc.)",
       duration: "3 Years",
       fee: "₹40,000/year",
-      specializations: ["Mathematics", "Physics", "Chemistry", "Computer Science", "Biotechnology"],
+      specializations: ["Mathematics", "Physics", "Chemistry", "Data Science", "Statistics", "Computer Science", "MicroBiology","Nutrition"],
       description: "Strong foundation in sciences with laboratory and research facilities",
     },
     {
       name: "Bachelor of Business Administration (BBA)",
       duration: "3 Years",
       fee: "₹45,000/year",
-      specializations: ["General Management", "Marketing", "Human Resources", "Finance"],
+      specializations: ["Marketing", "Human Resources", "Finance"],
       description: "Industry-oriented program preparing students for management roles",
     },
     {
       name: "Bachelor of Computer Applications (BCA)",
       duration: "3 Years",
       fee: "₹50,000/year",
-      specializations: ["Software Development", "Data Science", "Web Technologies"],
+      specializations: ["Software Development", "Data Structure", "Web Technologies" ,".NET","DataBase Design"],
       description: "Comprehensive IT education with focus on programming and applications",
     },
   ];
@@ -101,13 +100,13 @@ const Courses = () => {
                           <p className="font-semibold">{course.duration}</p>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-3">
+                      {/* <div className="flex items-center space-x-3">
                         <IndianRupee className="w-5 h-5 text-secondary flex-shrink-0" />
                         <div>
                           <p className="text-sm text-muted-foreground">Annual Fee</p>
                           <p className="font-semibold">{course.fee}</p>
                         </div>
-                      </div>
+                      </div> */}
                       <div className="flex items-center space-x-3">
                         <BookOpen className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>

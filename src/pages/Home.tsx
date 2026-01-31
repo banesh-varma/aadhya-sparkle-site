@@ -118,7 +118,7 @@ const Home = () => {
       text:"Important Announcement for 2 year Students"
     },
     {
-      text:"Welcome to IDEAL College for Women"
+      text:"Welcome to Aadhya College for Women"
     },
     {
       text:"Empowering Women, Shaping Brighter Future Through Quality Education"
@@ -245,8 +245,8 @@ const Home = () => {
             className=" mb-12"
           >
             <div>
-              <p className="underline text-orange-500 text-2xl mb-3">📚 WELCOME TO IDEAL COLLEGE FOR WOMEN</p>
-              <h1  className=" text-4xl">Empowering Women, Shaping <span className="text-orange-500">Brighter Future</span> Through Quality Education</h1>
+              <p className="underline text-orange-500 text-2xl mb-3">📚 WELCOME TO AADHYA JUNIOR & DEGREE COLLEGE FOR WOMEN</p>
+              <h1  className=" text-4xl">Empowering Women, Shaping <span className="text-orange-500">Bright Future</span> Through Quality Education</h1>
               <div className="grid lg:grid-cols-2">
                 <div className="m-5 grid md:grid-cols-2">
                   <div className="">
@@ -265,7 +265,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="mt-5">
-                  <p className="text-gray-500"><span className="text-gray-600 font-bold">Ideal College for Women</span>, we believe that <span className="text-gray-600 font-bold"> education is the key to unlocking the golden door of freedom.</span> Established with the vision of empowering women, we provide top-tier education, strong ethical values, and a foundation for future success. Within just a few years, Ideal has grown into a renowned institution dedicated to shaping the minds of young women and preparing them for a dynamic world. Today, our college proudly caters to over 1,800 students, a testament to our unwavering commitment to academic excellence.</p>
+                  <p className="text-gray-500"><span className="text-gray-600 font-bold">Aadhya Junior & degree College for Women</span>, we believe that <span className="text-gray-600 font-bold"> education is the key to unlocking the golden door of freedom.</span> Established with the vision of empowering women, we provide top-tier education, strong ethical values, and a foundation for future success. Within just a few years, Aadhya has grown into a renowned institution dedicated to shaping the minds of young women and preparing them for a dynamic world. Today, our college proudly caters to over 1,800 students, a testament to our unwavering commitment to academic excellence.</p>
 
                     <div className="grid md:grid-cols-2">
                       <div className="flex items-center gap-4 m-5">
@@ -309,7 +309,8 @@ const Home = () => {
                       <button className="bg-orange-400 rounded-xl rounded-bl-none hover:bg-orange-500 text-white px-10 font-bold">More...</button>
                       <div>
                         <p className="text-orange-500">Call Now</p>
-                        <p>040-24150022 / 24150222 / 8886673460</p>
+                        <p className="font-bold">04024052054 / 9381484063 / 9951178206 / 9949139275</p>
+                        <p className="bg-blue-300 p-1 rounded">Mail : aadhyadegree@gmail.com</p>
                       </div>
                     </div>
                 </div>

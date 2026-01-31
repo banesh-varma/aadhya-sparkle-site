@@ -64,16 +64,17 @@ const Footer = () => {
               <li className="flex items-start space-x-2">
                 <MapPin size={16} className="text-primary mt-1 flex-shrink-0" />
                 <span className="text-sm text-muted-foreground">
+                  Metro pillar No: 1515, Vijaya Diagnostic Center, Dilsukhnagar,
                   Hyderabad, Telangana, India
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">+91 9912313123</span>
+                <span className="text-sm text-muted-foreground">040-24042054, 9381484063, 9951178206, 9949139275, 9686205711</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">aadhyacollege@gmail.com</span>
+                <span className="text-sm text-muted-foreground">aadhyadegree@gmail.com</span>
               </li>
             </ul>
           </div>

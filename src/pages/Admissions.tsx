@@ -36,14 +36,14 @@ const Admissions = () => {
     "Recent passport-size photographs",
   ];
 
-  const importantDates = [
-    { event: "Application Opens", date: "March 1, 2024" },
-    { event: "Application Deadline", date: "May 31, 2024" },
-    { event: "Entrance Test", date: "June 15, 2024" },
-    { event: "Merit List Announcement", date: "June 30, 2024" },
-    { event: "Admission Process Begins", date: "July 1, 2024" },
-    { event: "Classes Commence", date: "July 15, 2024" },
-  ];
+  // const importantDates = [
+  //   { event: "Application Opens", date: "March 1, 2024" },
+  //   { event: "Application Deadline", date: "May 31, 2024" },
+  //   { event: "Entrance Test", date: "June 15, 2024" },
+  //   { event: "Merit List Announcement", date: "June 30, 2024" },
+  //   { event: "Admission Process Begins", date: "July 1, 2024" },
+  //   { event: "Classes Commence", date: "July 15, 2024" },
+  // ];
 
   return (
     <div className="min-h-screen pt-20">
@@ -60,9 +60,9 @@ const Admissions = () => {
             <p className="text-xl text-white/90 mb-8">
               Begin your journey towards excellence. Join the Aadhya family today!
             </p>
-            <Button size="lg" variant="secondary" className="shadow-elegant">
+            {/* <Button size="lg" variant="secondary" className="shadow-elegant">
               Apply Online Now
-            </Button>
+            </Button> */}
           </motion.div>
         </div>
       </section>
@@ -152,7 +152,7 @@ const Admissions = () => {
       </section>
 
       {/* Important Dates */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -187,7 +187,7 @@ const Admissions = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

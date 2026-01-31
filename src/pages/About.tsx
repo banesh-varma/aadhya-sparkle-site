@@ -163,14 +163,14 @@ const About = () => {
   ];
 
   const whyChoose = [
-    "Highly Qualified & Dedicated Faculty",
     "Safe & Secure Campus for Women",
+    "Strong Academic Discipline & Mentoring",
+    "Highly Qualified & Dedicated Faculty",
     "Modern Classrooms & Digital Learning Tools",
+    "Affordable Fee Structure With Scholarships",
     "Well-Equipped Computer Labs & Library",
     "Regular Workshops, Seminars & Career Training",
     "Personality Development & Soft Skills Programs",
-    "Affordable Fee Structure With Scholarships",
-    "Strong Academic Discipline & Mentoring",
     "Vibrant Campus Life with Clubs & Events",
   ];
 
