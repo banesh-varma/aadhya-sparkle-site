@@ -341,7 +341,6 @@ const Home = () => {
           </div> 
         </div>
       </section>
-
       {/* Stats Section */}
       <section
         className="py-20 relative bg-fixed bg-cover bg-center"

@@ -3,6 +3,11 @@ import { Calendar, FileText, CheckCircle2, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
+import admission from "../assets/admission/admission.jpeg";
+import admission1 from "../assets/admission/admission1.jpeg";
+import registration from "../assets/admission/registration.jpeg";
+import registration1 from "../assets/admission/registration1.jpeg";
+
 const Admissions = () => {
   const steps = [
     {
@@ -45,6 +50,13 @@ const Admissions = () => {
   //   { event: "Classes Commence", date: "July 15, 2024" },
   // ];
 
+  const images = [
+    { id: 1, src: admission, title: "Admission" },
+    { id: 2, src: admission1, title: "Admission 1" },
+    { id: 3, src: registration, title: "Registration" },
+    { id: 4, src: registration1, title: "Registration 1" },
+  ];
+
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -65,6 +77,25 @@ const Admissions = () => {
             </Button> */}
           </motion.div>
         </div>
+      </section>
+
+{/* addmission imges */}
+      <section className="pt-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {images.map((eachItem, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0, scale:1.05 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="shadow-card hover:shadow-elegant transition-smooth h-full">
+                  <img src={eachItem.src} alt={eachItem.title} />
+                </Card>
+              </motion.div>
+            ))}
+          </div>
       </section>
 
       {/* Admission Process */}
