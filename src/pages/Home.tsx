@@ -244,12 +244,6 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className=" mb-12"
           >
-            {/* <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Why Choose Aadhya?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Excellence in education with a focus on women's empowerment and holistic development
-            </p> */}
             <div>
               <p className="underline text-orange-500 text-2xl mb-3">📚 WELCOME TO IDEAL COLLEGE FOR WOMEN</p>
               <h1  className=" text-4xl">Empowering Women, Shaping <span className="text-orange-500">Brighter Future</span> Through Quality Education</h1>
@@ -343,32 +337,11 @@ const Home = () => {
                 </Card>
               </motion.div>
             ))}
-          </div>
-          
+          </div> 
         </div>
       </section>
 
       {/* Stats Section */}
-      {/* <section className="py-20 gradient-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center text-white"
-              >
-                <h3 className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</h3>
-                <p className="text-lg text-white/90">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       <section
         className="py-20 relative bg-fixed bg-cover bg-center"
         style={{
@@ -635,3 +608,154 @@ export default Home;
 
 
 // https://res.cloudinary.com/dsygwvdij/image/upload/DSC06794_n4kzbn.jpg
+
+{/* <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-14 text-center max-w-3xl mx-auto"
+          >
+            <p className="text-orange-500 text-xl font-semibold underline decoration-orange-300">
+              📚 Welcome to Ideal College for Women
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-3">
+              Empowering Women to Create a{" "}
+              <span className="text-orange-500">Brighter Future</span>
+            </h1>
+          </motion.div>
+
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="space-y-6">
+                <img
+                  className="rounded-[70px] rounded-bl-none shadow-md object-cover"
+                  src="https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_15_2025_-_9_46AM_svicsu.png"
+                />
+                <div className="flex items-center justify-between bg-orange-500 text-white p-3 rounded-[70px] rounded-br-none shadow-lg">
+                  <div className="bg-white p-4 rounded-full">
+                    <img
+                      className="w-12"
+                      src="https://www.idealedu.in/assets/img/icon/exchange-idea.svg"
+                    />
+                  </div>
+                  <p className="font-bold text-sm md:text-base">
+                    30 Years of Academic Excellence
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <img
+                  className="rounded-r-full border-2 border-dashed border-orange-400 p-2 object-cover shadow-sm"
+                  src="https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_15_2025_-_9_48AM_ex0dyf.png"
+                />
+                <img
+                  className="rounded-[70px] rounded-tl-none shadow-md object-cover"
+                  src="https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_15_2025_-_9_49AM_g0dcib.png"
+                />
+              </div>
+            </div>
+
+            
+            <div>
+              
+              <p className="text-gray-600 leading-relaxed text-lg mb-8">
+                <span className="font-bold text-gray-800">Ideal College for Women</span>{" "}
+                stands as a symbol of educational excellence and women’s empowerment.
+                Guided by strong values, we aim to provide a learning environment that
+                builds character, confidence, and competence. With over{" "}
+                <span className="font-semibold">1,800 active learners</span>, our
+                institution continues to shape dedicated and future-ready young women.
+              </p>
+
+              
+              <div className="grid sm:grid-cols-2 gap-6 mb-8">
+
+                <div className="flex gap-4 items-start">
+                  <div className="relative w-20 h-20">
+                    <div className="absolute w-full h-full bg-gray-200 rounded-full opacity-40 -left-2 -bottom-2" />
+                    <div className="absolute inset-0 bg-orange-500 rounded-full flex items-center justify-center p-3 shadow-md">
+                      <img src={book} className="w-10" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Holistic Learning</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      We focus on overall personality development through academics,
+                      leadership, and skill-building.
+                    </p>
+                  </div>
+                </div>
+
+                
+                <div className="flex gap-4 items-start">
+                  <div className="relative w-20 h-20">
+                    <div className="absolute w-full h-full bg-gray-200 rounded-full opacity-40 -left-2 -bottom-2" />
+                    <div className="absolute inset-0 bg-orange-500 rounded-full flex items-center justify-center p-3 shadow-md">
+                      <img src={degree} className="w-10" />
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg">Career-Focused Training</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Practical exposure, mentorship, and industry-oriented programs
+                      prepare students for brighter career pathways.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div className="bg-orange-100 p-5 rounded-2xl shadow-sm mb-8">
+                <p className="italic text-gray-800 text-md">
+                  “Education is not just about learning; it is about transforming
+                  lives, inspiring change, and empowering women to lead with
+                  confidence.”
+                </p>
+              </div>
+
+              
+              <div className="flex flex-wrap items-center gap-6">
+                <button className="bg-orange-500 text-white px-10 py-3 rounded-xl rounded-bl-none font-semibold hover:bg-orange-600 shadow-md transition">
+                  More...
+                </button>
+                <div>
+                  <p className="text-orange-500 font-semibold">Call Now</p>
+                  <p className="text-gray-700">
+                    040-24150022 / 24150222 / 8886673460
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div className="mt-20 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="h-full shadow-md hover:shadow-xl transition rounded-2xl">
+                  <CardHeader>
+                    <div className="mb-3 text-orange-500">{feature.icon}</div>
+                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section> */}
