@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   // {
@@ -40,7 +41,7 @@ const slides = [
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+  const navigate = useNavigate()
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -107,10 +108,10 @@ const HeroCarousel = () => {
                 transition={{ delay: 0.7, duration: 0.7 }}
                 className="flex flex-wrap gap-4"
               >
-                <Button size="lg" variant="secondary" className="shadow-elegant">
+                <Button size="lg" variant="secondary" className="shadow-elegant" onClick={() => navigate('/contact')}>
                   Apply Now
                 </Button>
-                <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20">
+                <Button size="lg" variant="outline" onClick={() => navigate('/about')} className="bg-white/10 text-white border-white/30 hover:bg-white/20">
                   Learn More
                 </Button>
               </motion.div>

@@ -160,80 +160,85 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto">
-          {/* NAME */}
-          <div>
-              <label className="font-medium">Full Name</label>
-            <Input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                placeholder="Enter your full name"
-              />
-              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
-            </div>
+          
+          <div className="px-5 bg-gradient-to-br from-[#F8F9FB] via-[#E6F2FA] to-[#FFF1D6] py-10">
 
-            {/* EMAIL */}
+            <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto ">
+            {/* NAME */}
             <div>
-              <label className="font-medium">Email</label>
+                <label className="font-medium">Full Name</label>
               <Input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                placeholder="your@email.com"
-              />
-              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
-            </div>
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                />
+                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              </div>
 
-            {/* PHONE */}
-            <div>
-              <label className="font-medium">Phone Number</label>
-              <Input
-                type="tel"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                placeholder="9876543210"
-              />
-              {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
-            </div>
+              {/* EMAIL */}
+              <div>
+                <label className="font-medium">Email</label>
+                <Input
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="your@email.com"
+                />
+                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+              </div>
 
-            {/* SUBJECT */}
-            <div>
-              <label className="font-medium">Subject</label>
-              <Input
-                type="text"
-                name="subject"
-                value={form.subject}
-                onChange={handleChange}
-                placeholder="What is this about?"
-              />
-              {errors.subject && (
-                <p className="text-red-500 text-sm">{errors.subject}</p>
-              )}
-            </div>
+              {/* PHONE */}
+              <div>
+                <label className="font-medium">Phone Number</label>
+                <Input
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="9876543210"
+                />
+                {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+              </div>
 
-            {/* MESSAGE */}
-            <div>
-              <label className="font-medium">Message</label>
-              <Textarea
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                placeholder="Write your message..."
-                className="min-h-[150px]"
-              />
-              {errors.message && (
-                <p className="text-red-500 text-sm">{errors.message}</p>
-              )}
-            </div>
+              {/* SUBJECT */}
+              <div>
+                <label className="font-medium">Subject</label>
+                <Input
+                  type="text"
+                  name="subject"
+                  value={form.subject}
+                  onChange={handleChange}
+                  placeholder="What is this about?"
+                />
+                {errors.subject && (
+                  <p className="text-red-500 text-sm">{errors.subject}</p>
+                )}
+              </div>
 
-            <Button type="submit" className="w-full" size="lg">
-              Send Message
-            </Button>
-          </form>
+              {/* MESSAGE */}
+              <div>
+                <label className="font-medium">Message</label>
+                <Textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Write your message..."
+                  className="min-h-[150px]"
+                />
+                {errors.message && (
+                  <p className="text-red-500 text-sm">{errors.message}</p>
+                )}
+              </div>
+
+              <Button type="submit" className="w-full" size="lg">
+                Send Message
+              </Button>
+            </form>
+          </div>
+
         </div>
       </section>
 
