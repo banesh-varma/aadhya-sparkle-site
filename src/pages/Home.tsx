@@ -7,6 +7,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AnnouncementsBar from "@/components/AnnouncementsBar";
 import book from "../assets/book.png"
 import degree from "../assets/degree.png"
+import HomeCourses from "../components/HomeCourses";
+import JuniorCollegeCourses from "../components/JuniorCollegeCourses";
+
+import chaitanya from '../assets/comments/chaitanya.jpeg'
+
+
 
 const Home = () => {
   // const features = [
@@ -155,6 +161,9 @@ const Home = () => {
           transition={{ duration: 0.6 }}
           className=""
       >
+        <HomeCourses />
+        <JuniorCollegeCourses/>
+        
         <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-x-5 mt-5">
           <div className="relative rounded-2xl overflow-hidden bg-white p-5 shadow-lg m-5">
             {/* Heading stays fixed */}
@@ -394,9 +403,9 @@ const Home = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                name: "Sravani – B.Com (CA)",
+                name: "Chaitanya – B.Com (CA)",
                 text: "Aadhya College helped me discover my strengths. The teachers supported me at every step and boosted my confidence.",
-                image: "https://res.cloudinary.com/dsygwvdij/image/upload/Generated_Image_November_02_2025_-_9_51PM_pbofj9.png",
+                image: chaitanya,
               },
               {
                 name: "Meghana – B.Sc (CS)",
